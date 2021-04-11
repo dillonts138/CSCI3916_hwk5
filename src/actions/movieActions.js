@@ -29,7 +29,7 @@ export function setMovie(movie) {
     }
 }
 
-export function fetchMovie(TItle) {
+export function fetchMovie(Title) {
     const env = runtimeEnv();
     return dispatch => {
         return fetch(`${env.REACT_APP_API_URL}/movies/${Title}?reviews=true`, {
