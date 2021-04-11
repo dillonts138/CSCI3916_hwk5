@@ -37,7 +37,9 @@ export function fetchMovie(Title) {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': localStorage.getItem('token')
+                'Authorization': localStorage.getItem('token'),
+                'Title': ${Title},
+                'Reviews': 'true'
             },
             mode: 'cors'
         }).then((response) => {
@@ -59,7 +61,8 @@ export function fetchMovies() {
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Authorization': localStorage.getItem('token')
+                'Authorization': localStorage.getItem('token'),
+                'Reviews': 'true'
             },
             mode: 'cors'
         }).then((response) => {
